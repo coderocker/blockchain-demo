@@ -7,7 +7,9 @@
     "test": "jest --watchAll"
   },
   "standard": {
-    "env": ["jest"]
+    "env": [
+      "jest"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^23.6.0",
+    "node-ipc": "^9.1.1",
     "standard": "^14.3.0"
   }
 }
