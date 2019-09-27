@@ -25,5 +25,8 @@
     "jest": "^23.6.0",
     "node-ipc": "^9.1.1",
     "standard": "^14.3.0"
+  },
+  "dependencies": {
+    "hex-to-binary": "^1.0.1"
   }
 }
