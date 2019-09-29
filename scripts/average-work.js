@@ -1,4 +1,4 @@
-const BlockChain = require('./blockchain')
+const BlockChain = require('../blockchain/index')
 
 const blockchain = new BlockChain()
 
@@ -19,7 +19,9 @@ for (let i = 0; i < 1000; i++) {
   timeDiff = nextTimeStamp - prevTimeStamp
   times.push(timeDiff)
 
-  average = times.reduce((total, num) => (total + num)) / times.length
+  average = times.reduce((total, num) => total + num) / times.length
 
-  console.log(`Time to mine block: ${timeDiff}ms. Difficulty: ${nextBlock.difficulty}. Average time: ${average}ms`)
+  console.log(
+    `Time to mine block: ${timeDiff}ms. Difficulty: ${nextBlock.difficulty}. Average time: ${average}ms`
+  )
 }
