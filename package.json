@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "start": "node index.js ",
+    "dev": "npm run start-redis && nodemon index.js",
+    "dev-peer": "cross-env GENERATE_PEER_PORT='true' nodemon index.js",
+    "start-redis": "redis-server --daemonize yes"
   },
   "standard": {
     "env": [
@@ -15,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "eslint": "^6.4.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
@@ -24,9 +29,15 @@
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^23.6.0",
     "node-ipc": "^9.1.1",
+    "nodemon": "^1.18.4",
     "standard": "^14.3.0"
   },
   "dependencies": {
-    "hex-to-binary": "^1.0.1"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "hex-to-binary": "^1.0.1",
+    "pubnub": "^4.21.6",
+    "redis": "^2.8.0",
+    "request": "^2.88.0"
   }
 }
